@@ -1,6 +1,7 @@
-
+﻿
 #include "dmstringtest.h"
 #include "gtest.h"
+#include "dmstring.hpp"
 
 class env_dmstringtest
 {
@@ -32,4 +33,11 @@ TEST_F(frame_dmstringtest, init)
         module->Test();
         module->Release();
     }
+}
+
+TEST_F(frame_dmstringtest, SplitBySingleChar) {
+    std::string to_split = "apple,banana,cherry";
+    std::vector<std::string> expected = {"apple", "banana", "cherry"};
+    std::vector<std::string> result = dmstring::split(to_split, ",");
+    ASSERT_EQ(result, expected);
 }

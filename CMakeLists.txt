@@ -26,7 +26,7 @@ ModuleImportAll("thirdparty")
 LibImport("libdmstringtest" "src/libdmstringtest")
 
 if(PROJECT_IS_TOP_LEVEL)
-    ExeImport("test" "libdmstringtest;dmtest")
+    ExeImport("test" "libdmstringtest;dmtest;dmstring")
 endif()
 
 AddInstall("libdmstringtest" "${CMAKE_CURRENT_SOURCE_DIR}/include")

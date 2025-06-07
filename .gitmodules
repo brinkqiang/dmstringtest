@@ -1,0 +1,3 @@
+[submodule "thirdparty/dmstring"]
+	path = thirdparty/dmstring
+	url = https://github.com/brinkqiang/dmstring
